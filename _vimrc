@@ -76,3 +76,4 @@ set number
 let g:netrw_silent= 1
 
 runtime! _vimrc
+runtime! pack/MyVimConf/opt/plugin_enable_vimrc

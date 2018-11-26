@@ -39,3 +39,4 @@ command Term terminal powershell
 "}
 
 runtime! _gvimrc
+runtime! pack/MyVimConf/opt/plugin_enable_vimrc
