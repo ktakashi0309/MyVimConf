@@ -8,6 +8,8 @@ set breakindent
 set formatoptions=q
 "ツールバーの非表示
 set guioptions-=T
+"メニューバーの非表示
+set guioptions-=m
 "全角文字フォント(guifontwide)を使用するためにvimシステムのエンコードをutf-8にする
 set encoding=utf-8
 "新規作成するファイルをutf-8で保存
