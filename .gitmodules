@@ -10,3 +10,9 @@
 [submodule "opt/molokai"]
 	path = opt/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "opt/nerdtree"]
+	path = opt/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "opt/vim-airline"]
+	path = opt/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
