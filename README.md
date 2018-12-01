@@ -1,5 +1,11 @@
 # MyVimConf
 
+## 概要
+VimのプラグインをVim標準のパッケージ管理機能で管理するためのリポジトリ。
+つまりVimプラグインの集まりであるVimパッケージである。
+プラグインの有効無効を簡単に切り替えできるよう一つのファイルで管理する。
+また、一般的な_vimrc,_gvimrcも付随する。
+
 ## 導入
 gitが使えない方  
 OneDriveで共有されている下記をダウンロードするとMyVimConfが入ったKaoriya-vimが使えます。
@@ -22,3 +28,7 @@ source $VIM/vimfiles/pack/MyVimConf/_vimrc
 optディレクトリにプラグインのリポジトリをgit submoduleでcloneする。
 opt/plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。
 バイナリに依存するプラグインを導入する場合はバイナリをbinファルダに入れるとvim起動時にpathが通る
+
+## 備考
+opt/plugin_vimrcは___vimrcとgvimrcの両方から呼ばれることに注意！
+これはプラグインの設定をvimrc用とgvimrc用の二つ用意する煩雑さを回避する苦肉の策である。
