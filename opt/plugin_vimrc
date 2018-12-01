@@ -1,0 +1,15 @@
+"packadd ale
+
+packadd fzf.vim
+
+packadd migemo
+
+packadd molokai "{
+  colorscheme molokai
+"}
+
+"packadd nerdtree
+
+packadd vim-airline
+
+packadd indentLine
