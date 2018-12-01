@@ -77,5 +77,10 @@ set number
 "netrw(ファイラー)がリモートコピーするときなどにプロンプトを出さない
 let g:netrw_silent= 1
 
-runtime! _vimrc
-runtime! pack/MyVimConf/opt/plugin_enable_vimrc
+" pathを通す{
+if has('vim_starting')
+    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin"
+end
+"}
+
+runtime! pack/MyVimConf/opt/plugin_vimrc

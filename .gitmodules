@@ -1,0 +1,12 @@
+[submodule "opt/indentLine"]
+	path = opt/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "opt/ale"]
+	path = opt/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "opt/fzf.vim"]
+	path = opt/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "opt/molokai"]
+	path = opt/molokai
+	url = https://github.com/tomasr/molokai.git
