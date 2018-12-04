@@ -17,5 +17,6 @@ packadd indentLine
 
 packadd vim-markdown
 packadd previm "{
-let g:previm_open_cmd='$USERPROFILE\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'
+  "let g:previm_open_cmd='$USERPROFILE\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'
+  let g:previm_open_cmd='start'
 "}
