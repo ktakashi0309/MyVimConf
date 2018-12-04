@@ -22,3 +22,6 @@
 [submodule "opt/previm"]
 	path = opt/previm
 	url = https://github.com/previm/previm.git
+[submodule "opt/vim-auto-save"]
+	path = opt/vim-auto-save
+	url = https://github.com/vim-scripts/vim-auto-save.git
