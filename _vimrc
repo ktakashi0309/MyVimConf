@@ -79,7 +79,7 @@ let g:netrw_silent= 1
 
 " pathを通す{
 if has('vim_starting')
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin"
+    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin\\python-3.7.1-embed-amd64"
 end
 "}
 

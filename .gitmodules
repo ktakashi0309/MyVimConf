@@ -16,3 +16,6 @@
 [submodule "opt/vim-airline"]
 	path = opt/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "opt/markdown-preview.vim"]
+	path = opt/markdown-preview.vim
+	url = https://github.com/iamcco/markdown-preview.vim.git

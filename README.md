@@ -25,7 +25,7 @@ source $VIM/vimfiles/pack/MyVimConf/_vimrc
 ~~~
 
 ## プラグインの追加
-optディレクトリにプラグインのリポジトリをgit submoduleでcloneする。
+optディレクトリにプラグインのリポジトリをgit submodule addする。
 opt/plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。
 バイナリに依存するプラグインを導入する場合はバイナリをbinファルダに入れるとvim起動時にpathが通る
 
