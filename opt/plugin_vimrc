@@ -1,22 +1,21 @@
-"packadd ale
+"packadd ale "非同期のコードチェッカー
 
-packadd fzf.vim
+packadd fzf.vim "ファイルのあいまい検索
+packadd fzf "fzf.vimの依存
 
-packadd migemo
-
-packadd molokai "{
+packadd migemo "日本語のアルファベット検索 
+"
+packadd molokai "カラースキーム{
   colorscheme molokai
 "}
 
-"packadd nerdtree
+"packadd nerdtree "ファイラー
 
-packadd vim-airline
+packadd vim-airline "見た目のカスタマイズ
 
-packadd indentLine
+packadd indentLine "インデントを見やすくする
 
-
-packadd vim-markdown
-packadd previm "{
-  "let g:previm_open_cmd='$USERPROFILE\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'
+packadd vim-markdown "マークダウン用プラグイン
+packadd previm "マークダウンのプレビュー表示{
   let g:previm_open_cmd='start'
 "}

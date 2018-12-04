@@ -8,7 +8,7 @@ VimのプラグインをVim標準のパッケージ管理機能で管理する�
 
 ## 導入
 gitが使えない方  
-OneDriveで共有されている下記をダウンロードするとMyVimConfが入ったKaoriya-vimが使えます。
+OneDriveで共有されている下記をダウンロードするとMyVimConfが入ったKaoriya-vimが使えます。(嘘)
 https://1drv.ms/f/s!AmB3qp3WRH4DlOk89_fRJb0SSMv6mA
 
 gitが使える方  
