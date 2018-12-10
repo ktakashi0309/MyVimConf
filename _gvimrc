@@ -36,4 +36,11 @@ tmap <C-q> <C-w>N
 command Term terminal powershell
 "}
 
+function SaveasFunc() "名前を付けて保存のコマンド{
+  browse confirm saveas
+  cd %:h
+endfunction
+command Saveas call SaveasFunc()
+"}
+
 runtime! pack/MyVimConf/opt/plugin_vimrc
