@@ -24,3 +24,8 @@ packadd vim-auto-save "自動保存{
   let g:auto_save = 1  " enable AutoSave on Vim startup
   let g:auto_save_silent = 1  " do not display the auto-save notification
 "}
+
+
+packadd vim-syntax-yara "yararuleのシンタックスハイライト{
+  autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
+"}
