@@ -43,4 +43,18 @@ endfunction
 command Saveas call SaveasFunc()
 "}
 
+"TOhtmlコマンドカスタマイズ{
+let html_no_pre = 1
+let g:html_prevent_copy = "n"
+let g:html_font = "Consolas"
+function TOMyhtmlFunc()
+  TOhtml
+  !start %:p
+  sleep 1
+  call delete(expand("%:p"))
+endfunction
+command TOMyhtml call TOMyhtmlFunc()
+
+"}
+
 runtime! pack/MyVimConf/opt/plugin_vimrc
