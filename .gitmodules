@@ -28,3 +28,6 @@
 [submodule "opt/vim-ps1"]
 	path = opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "opt/vim-syntax-yara"]
+	path = opt/vim-syntax-yara
+	url = https://github.com/s3rvac/vim-syntax-yara.git

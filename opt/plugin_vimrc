@@ -26,3 +26,7 @@ packadd vim-auto-save "自動保存{
 "}
 
 packadd vim-ps1 "powershellのシンタックス{
+
+packadd vim-syntax-yara "yararuleのシンタックスハイライト{
+  autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
+"}
