@@ -86,4 +86,7 @@ end
 " BOM付きにする
 set bomb
 
+" netrwの履歴保存ファイルの作成を停止
+let g:netrw_dirhistmax=0
+
 runtime! pack/MyVimConf/opt/plugin_vimrc
