@@ -83,4 +83,7 @@ if has('vim_starting')
 end
 "}
 
+" BOM付きにする
+set bomb
+
 runtime! pack/MyVimConf/opt/plugin_vimrc

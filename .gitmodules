@@ -25,3 +25,6 @@
 [submodule "opt/vim-auto-save"]
 	path = opt/vim-auto-save
 	url = https://github.com/vim-scripts/vim-auto-save.git
+[submodule "opt/vim-ps1"]
+	path = opt/vim-ps1
+	url = https://github.com/PProvost/vim-ps1.git
