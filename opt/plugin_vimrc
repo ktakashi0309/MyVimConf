@@ -32,6 +32,7 @@ packadd vim-auto-save "自動保存{
   let g:auto_save_silent = 1  " do not display the auto-save notification
 "}
 
+packadd vim-ps1 "powershellのシンタックス{
 
 packadd vim-syntax-yara "yararuleのシンタックスハイライト{
   autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
