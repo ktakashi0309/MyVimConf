@@ -31,3 +31,12 @@
 [submodule "opt/vim-syntax-yara"]
 	path = opt/vim-syntax-yara
 	url = https://github.com/s3rvac/vim-syntax-yara.git
+[submodule "opt/vim-dirvish"]
+	path = opt/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish.git
+[submodule "opt/vim-scala"]
+	path = opt/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "opt/ensime-vim"]
+	path = opt/ensime-vim
+	url = https://github.com/ensime/ensime-vim.git

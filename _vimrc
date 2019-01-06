@@ -79,7 +79,7 @@ let g:netrw_silent= 1
 
 " pathを通す{
 if has('vim_starting')
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin\\python-3.7.1-embed-amd64"
+    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;"
 end
 "}
 
@@ -88,5 +88,9 @@ set bomb
 
 " netrwの履歴保存ファイルの作成を停止
 let g:netrw_dirhistmax=0
+
+" 未保存でもbackgroundへ行ける
+set hidden
+
 
 runtime! pack/MyVimConf/opt/plugin_vimrc

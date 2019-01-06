@@ -18,6 +18,7 @@ packadd vim-airline "見た目のカスタマイズ{
   let g:airline#extensions#tabline#formatter = 'unique_tail'
   nmap <Tab> <Plug>AirlineSelectNextTab
   nmap <S-Tab> <Plug>AirlineSelectPrevTab
+
 "}
 
 packadd indentLine "インデントを見やすくする
@@ -29,7 +30,7 @@ packadd previm "マークダウンのプレビュー表示{
 
 packadd vim-auto-save "自動保存{
   "let g:auto_save = 1  " enable AutoSave on Vim startup
-  let g:auto_save_silent = 1  " do not display the auto-save notification
+  "let g:auto_save_silent = 1  " do not display the auto-save notification
 "}
 
 packadd vim-ps1 "powershellのシンタックス{
@@ -37,3 +38,9 @@ packadd vim-ps1 "powershellのシンタックス{
 packadd vim-syntax-yara "yararuleのシンタックスハイライト{
   autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 "}
+
+" packadd vim-dirvish "ファイラー
+
+packadd vim-scala "scalaシンタックスプラグイン
+
+" packadd ensime-vim "scala補完プラグイン
