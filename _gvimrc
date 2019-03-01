@@ -54,7 +54,6 @@ function TOMyhtmlFunc()
   call delete(expand("%:p"))
 endfunction
 command TOMyhtml call TOMyhtmlFunc()
-
 "}
 
-runtime! pack/MyVimConf/opt/plugin_vimrc
+runtime! pack/MyVimConf/opt/plugin_gvimrc

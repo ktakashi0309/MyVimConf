@@ -52,7 +52,7 @@ set number
 
 "eolとtabを可視化する{
   set list
-  set listchars=eol:↲,tab:▸»
+  set listchars=eol:↲,tab:▸»,nbsp:⍽
   "特殊文字ストック$.<\~¶¬>\…->—>—-↲——»▸«
 "}
 "全角スペースの可視化{
@@ -75,11 +75,14 @@ set number
 "}
 
 "netrw(ファイラー)がリモートコピーするときなどにプロンプトを出さない
-let g:netrw_silent= 1
+" let g:netrw_silent= 1
 
 " pathを通す{
 if has('vim_starting')
     let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;"
+    let $PATH = $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64;" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64\\Scripts;" . $PATH
+    let $PYTHONPATH = $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64\\Lib\\site-packages;" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64"
+    let g:python3_host_prog = $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64\\python.exe"
 end
 "}
 
@@ -91,6 +94,19 @@ let g:netrw_dirhistmax=0
 
 " 未保存でもbackgroundへ行ける
 set hidden
+autocmd FileType netrw setl bufhidden=wipe
 
+
+" netrwがウィンドウに表示されていないときにすぐにバッファから削除
+function! QuitNetrw()
+  for i in range(1, bufnr($))
+    if buflisted(i)
+      if getbufvar(i, '&filetype') == "netrw"
+        silent exe 'bwipeout ' . i
+      endif
+    endif
+  endfor
+endfunction
+autocmd VimLeavePre * call QuitNetrw()
 
 runtime! pack/MyVimConf/opt/plugin_vimrc

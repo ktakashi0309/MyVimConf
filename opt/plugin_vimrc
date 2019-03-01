@@ -1,46 +1,73 @@
-"packadd ale "非同期のコードチェッカー
-
+"packadd vim-dirvish "ファイラー
 packadd fzf.vim "ファイルのあいまい検索
 packadd fzf "fzf.vimの依存
+packadd migemo "日本語のアルファベット検索
+"packadd nerdtree "ファイラー
+packadd indentLine "インデントを見やすくする
+packadd vim-markdown "マークダウン用プラグイン
+packadd vim-ps1 "powershellのシンタックス{
+packadd AutoComplPop "自動保管
 
-packadd migemo "日本語のアルファベット検索 
-"
-packadd molokai "カラースキーム{
-  colorscheme molokai
+"非同期のコードチェッカー{
+  let g:ale_completion_enabled = 1
+  packadd ale 
+  let g:ale_linters = {'scala': ['sbtserver']}
+  let g:ale_lint_on_save = 1
 "}
 
-"packadd nerdtree "ファイラー
-
-packadd vim-airline "見た目のカスタマイズ{
+"見た目のカスタマイズ{
+  packadd vim-airline 
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = '|'
   let g:airline#extensions#tabline#formatter = 'unique_tail'
   nmap <Tab> <Plug>AirlineSelectNextTab
   nmap <S-Tab> <Plug>AirlineSelectPrevTab
-
 "}
 
-packadd indentLine "インデントを見やすくする
-
-packadd vim-markdown "マークダウン用プラグイン
-packadd previm "マークダウンのプレビュー表示{
+"マークダウンのプレビュー表示{
+  packadd previm 
   let g:previm_open_cmd='start'
 "}
 
-packadd vim-auto-save "自動保存{
+"自動保存{
+  "packadd vim-auto-save 
   "let g:auto_save = 1  " enable AutoSave on Vim startup
   "let g:auto_save_silent = 1  " do not display the auto-save notification
 "}
 
-packadd vim-ps1 "powershellのシンタックス{
-
-packadd vim-syntax-yara "yararuleのシンタックスハイライト{
+"yararuleのシンタックスハイライト{
+  packadd vim-syntax-yara 
   autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 "}
 
-" packadd vim-dirvish "ファイラー
+"自動保管{
+  "packadd neocomplete.vim
+  "NeoCompleteEnable
+"}
 
-packadd vim-scala "scalaシンタックスプラグイン
+"scala用プラグイン{
+  packadd vim-scala "scalaシンタックスプラグイン
+  packadd ensime-vim "scala補完プラグイン
+"}
 
-" packadd ensime-vim "scala補完プラグイン
+" omni用の自動保管{
+  packadd vim-hug-neovim-rpc "deopleteの依存
+  packadd nvim-yarp "deopleteの依存
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#auto_complete_delay = 0
+  let g:deoplete#auto_complete_start_length = 1
+  let g:deoplete#enable_camel_case = 0
+  let g:deoplete#enable_ignore_case = 0
+  let g:deoplete#enable_refresh_always = 0
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#file#enable_buffer_path = 1
+  let g:deoplete#max_list = 10000
+  packadd deoplete.nvim
+    call deoplete#custom#option('omni_patterns', {'scala': '[^. *\t]\.\w*'}) "omniが発動するタイミング
+    call deoplete#custom#option('keyword_patterns', { 'scala': ''}) "omni以外は使わない
+" }
+
+"go用プラグイン{
+  "packadd vim-go 
+"}
