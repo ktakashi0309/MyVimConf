@@ -109,4 +109,7 @@ function! QuitNetrw()
 endfunction
 autocmd VimLeavePre * call QuitNetrw()
 
+" scala辞書
+autocmd FileType scala :set dictionary=$VIM/vimfiles/pack/MyVimConf/dict/scala.dict
+
 runtime! pack/MyVimConf/opt/plugin_vimrc
