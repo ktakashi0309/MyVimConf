@@ -17,9 +17,9 @@ cd vimfiles/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
 cd ../..
 # $VIMに下記内容で_gvimrcを作成する。  
-write-output 'source $VIM/vimfiles/pack/MyVimConf/_gvimrc'|out-file _gvimrc
+write-output 'source $VIM/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii _gvimrc
 # $VIMに下記内容で_vimrcを作成する。  
-write-output 'source $VIM/vimfiles/pack/MyVimConf/_vimrc'|out-file _vimrc
+write-output 'source $VIM/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii _vimrc
 ~~~
 
 ## プラグインの追加
