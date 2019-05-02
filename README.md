@@ -9,23 +9,16 @@ VimのプラグインをVim標準のパッケージ管理機能で管理する�
 ## 導入
   
 kaoriya-vimを本家からダウンロードしてください。
-$VIM(vim.exeのあるフォルダ)内にvimfiles/packディレクトリを作成する。
 ~~~
+# $VIM(vim.exeのあるフォルダ)内にvimfiles/packディレクトリを作成する。
 New-Item vimfiles/pack -ItemType Directory
-~~~
-vimfiles/pack内に本リポジトリを--recursive でcloneする。  
-~~~
+# vimfiles/pack内に本リポジトリを--recursive でcloneする。  
 cd vimfiles/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
 cd ../..
-~~~
-
-$VIMに下記内容で_gvimrcを作成する。  
-~~~
+# $VIMに下記内容で_gvimrcを作成する。  
 write-output "source $VIM/vimfiles/pack/MyVimConf/_gvimrc"|out-file _gvimrc
-~~~
-$VIMに下記内容で_vimrcを作成する。  
-~~~
+# $VIMに下記内容で_vimrcを作成する。  
 write-output "source $VIM/vimfiles/pack/MyVimConf/_vimrc"|out-file _vimrc
 ~~~
 
