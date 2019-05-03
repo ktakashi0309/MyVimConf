@@ -41,7 +41,7 @@ packadd AutoComplPop "自動保管
   autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 "}
 
-"自動保管{
+"自動補完{
   "packadd neocomplete.vim
   "NeoCompleteEnable
 "}
@@ -69,5 +69,10 @@ packadd AutoComplPop "自動保管
 "" }
 
 "go用プラグイン{
-  "packadd vim-go 
+  packadd vim-go 
+"}
+
+"python用プラグイン{
+  packadd jedi-vim
+  autocmd FileType python setlocal omnifunc=jedi#completions
 "}

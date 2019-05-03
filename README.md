@@ -26,7 +26,3 @@ write-output 'source $VIM/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding asc
 optディレクトリにプラグインのリポジトリをgit submodule addする。
 opt/plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。
 バイナリに依存するプラグインを導入する場合はバイナリをbinファルダに入れるとvim起動時にpathが通る
-
-## 備考
-opt/plugin_vimrcは___vimrcとgvimrcの両方から呼ばれることに注意！
-これはプラグインの設定をvimrc用とgvimrc用の二つ用意する煩雑さを回避する苦肉の策である。
