@@ -97,18 +97,21 @@ autocmd FileType netrw setl bufhidden=wipe
 
 
 " netrwがウィンドウに表示されていないときにすぐにバッファから削除
-function! QuitNetrw()
-  for i in range(1, bufnr($))
-    if buflisted(i)
-      if getbufvar(i, '&filetype') == "netrw"
-        silent exe 'bwipeout ' . i
-      endif
-    endif
-  endfor
-endfunction
-autocmd VimLeavePre * call QuitNetrw()
+" function! QuitNetrw()
+"   for i in range(1, bufnr($))
+"     if buflisted(i)
+"       if getbufvar(i, '&filetype') == "netrw"
+"         silent exe 'bwipeout ' . i
+"       endif
+"     endif
+"   endfor
+" endfunction
+" autocmd VimLeavePre * call QuitNetrw()
 
 " scala辞書
 autocmd FileType scala :set dictionary=$VIM/vimfiles/pack/MyVimConf/dict/scala.dict
+
+" 補完の挙動
+set completeopt=menuone,noselect
 
 runtime! pack/MyVimConf/opt/plugin_vimrc

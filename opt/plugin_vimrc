@@ -6,13 +6,14 @@ packadd migemo "日本語のアルファベット検索
 packadd indentLine "インデントを見やすくする
 packadd vim-markdown "マークダウン用プラグイン
 packadd vim-ps1 "powershellのシンタックス{
-packadd AutoComplPop "自動保管
+" packadd AutoComplPop "自動保管
 
 "非同期のコードチェッカー{
   let g:ale_completion_enabled = 1
   packadd ale 
   let g:ale_linters = {'scala': ['sbtserver'],'python':['flake8']}
   let g:ale_lint_on_save = 1
+  let g:ale_sign_column_always = 1
 "}
 
 "見た目のカスタマイズ{
@@ -75,4 +76,6 @@ packadd AutoComplPop "自動保管
 "python用プラグイン{
   packadd jedi-vim
   autocmd FileType python setlocal omnifunc=jedi#completions
+  let g:jedi#show_call_signatures=2
+  let g:jedi#show_call_signatures_delay=0
 "}
