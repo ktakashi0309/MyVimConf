@@ -80,7 +80,8 @@ set number
 " pathを通す{
 if has('vim_starting')
     let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;"
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\gvim_pipenv\\.venv\\Scripts"
+    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64\\Scripts"
+    " let $PYTHONPATH = $PYTHONPATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64\\Lib\\site-packages;" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.5.4-embed-amd64"
 end
 "}
 
