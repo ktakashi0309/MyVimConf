@@ -10,7 +10,7 @@ VimのプラグインをVim標準のパッケージ管理機能で管理する�
   
 ~~~
 # kaoriyaVimをCドライブ直下にインストール
-Invoke-WebRequest -uri https://github.com/koron/vim-kaoriya/releases/download/v8.1.1048-20190325/vim81-kaoriya-win64-8.1.1048-20190325.zip-OutFile $env:temp\gvim.zip
+Invoke-WebRequest -uri https://github.com/koron/vim-kaoriya/releases/download/v8.1.1048-20190325/vim81-kaoriya-win64-8.1.1048-20190325.zip -OutFile $env:temp\gvim.zip
 Expand-Archive $env:temp\gvim.zip -DestinationPath C:\
 remove-item $env:temp\gvim.zip
 # $VIM(vim.exeのあるフォルダ)内にvimfiles/packディレクトリを作成する。
