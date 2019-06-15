@@ -61,3 +61,9 @@
 [submodule "opt/jedi-vim"]
 	path = opt/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "opt/vim-lsp"]
+	path = opt/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "opt/rust.vim"]
+	path = opt/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
