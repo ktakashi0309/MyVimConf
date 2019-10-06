@@ -6,24 +6,25 @@ VimのプラグインをVim標準のパッケージ管理機能で管理する�
 プラグインの有効無効を簡単に切り替えできるよう一つのファイルで管理する。
 また、一般的な_vimrc,_gvimrcも付随する。
 
+## 依存
+vimをインストールしてください。
+python依存のプラグインを使う場合はpythonがインストールされている必要があります。
+
+
 ## 導入
   
-~~~
-# kaoriyaVimをCドライブ直下にインストール
-Invoke-WebRequest -uri https://github.com/koron/vim-kaoriya/releases/download/v8.1.1048-20190325/vim81-kaoriya-win64-8.1.1048-20190325.zip -OutFile $env:temp\gvim.zip
-Expand-Archive $env:temp\gvim.zip -DestinationPath C:\
-remove-item $env:temp\gvim.zip
-# $VIM(vim.exeのあるフォルダ)内にvimfiles/packディレクトリを作成する。
-cd C:\vim81-kaoriya-win64
+```
+# ホームディレクトリ内にvimfiles/packディレクトリを作成する。
+cd ~
 New-Item vimfiles/pack -ItemType Directory
-# $VIMに下記内容で_gvimrcを作成する。  
-write-output 'source $VIM/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii _gvimrc
-# $VIMに下記内容で_vimrcを作成する。  
-write-output 'source $VIM/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii _vimrc
+# $HOMEに下記内容で_gvimrcを作成する。  
+write-output 'source $HOME/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii gvimrc
+# $HOMEに下記内容で_vimrcを作成する。  
+write-output 'source $HOME/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii vimrc
 # vimfiles/pack内に本リポジトリを--recursive でcloneする。  
 cd vimfiles/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
-~~~
+```
 
 ## プラグインの追加
 optディレクトリにプラグインのリポジトリをgit submodule addする。

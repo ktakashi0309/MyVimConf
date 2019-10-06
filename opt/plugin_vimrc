@@ -95,3 +95,9 @@ packadd vim-ps1 "powershellのシンタックス{
 "rust用プラグイン{
   packadd rust.vim
 "}
+
+"カラースキーム{
+  packadd molokai
+  colorscheme molokai
+"}
+
