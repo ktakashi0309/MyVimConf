@@ -67,3 +67,9 @@
 [submodule "opt/rust.vim"]
 	path = opt/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "opt/async.vim"]
+	path = opt/async.vim
+	url = https://github.com/prabirshrestha/async.vim.git
+[submodule "opt/vim-airline-themes"]
+	path = opt/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
