@@ -108,3 +108,4 @@ packadd vim-ps1 "powershellのシンタックス{
   colorscheme molokai
 "}
 
+packadd coc.nvim

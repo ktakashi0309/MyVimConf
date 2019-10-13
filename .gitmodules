@@ -73,3 +73,7 @@
 [submodule "opt/vim-airline-themes"]
 	path = opt/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "opt/coc.nvim"]
+	path = opt/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
