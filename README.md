@@ -31,14 +31,13 @@ Linux
 ```
 # ホームディレクトリ内に.vim/packディレクトリを作成する。
 cd ~
-mkdir vimfiles
-cd vimfiles
+mkdir .vim
+cd .vim
+# _vimrcを作成する。  
+echo 'source $HOME/.vim/pack/MyVimConf/_vimrc' > _vimrc
 mkdir pack
 cd pack
-# $HOMEに下記内容で_vimrcを作成する。  
-echo 'source $HOME/.vim/pack/MyVimConf/_vimrc' > _vimrc
-# vimfiles/pack内に本リポジトリを--recursive でcloneする。  
-cd vimfiles/pack
+# リポジトリを--recursive でcloneする。  
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
 ```
 
