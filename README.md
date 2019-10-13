@@ -13,6 +13,7 @@ python依存のプラグインを使う場合はpythonがインストールさ�
 
 ## 導入
   
+Windows
 ```
 # ホームディレクトリ内にvimfiles/packディレクトリを作成する。
 cd ~
@@ -21,6 +22,21 @@ New-Item vimfiles/pack -ItemType Directory
 write-output 'source $HOME/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii gvimrc
 # $HOMEに下記内容で_vimrcを作成する。  
 write-output 'source $HOME/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii vimrc
+# vimfiles/pack内に本リポジトリを--recursive でcloneする。  
+cd vimfiles/pack
+git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
+```
+
+Linux
+```
+# ホームディレクトリ内に.vim/packディレクトリを作成する。
+cd ~
+mkdir vimfiles
+cd vimfiles
+mkdir pack
+cd pack
+# $HOMEに下記内容で_vimrcを作成する。  
+echo 'source $HOME/.vim/pack/MyVimConf/_vimrc' > _vimrc
 # vimfiles/pack内に本リポジトリを--recursive でcloneする。  
 cd vimfiles/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
