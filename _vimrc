@@ -1,4 +1,6 @@
-"色の指定
+﻿"色の指定
+set t_Co=256
+set termguicolors
 colorscheme desert
 "自動改行をなくす
 set textwidth=0
@@ -32,15 +34,6 @@ set autoindent
 set breakindent
 "カーソル移動で行間移動
 set whichwrap=b,s,h,l,<,>,[,],~
-"インサートモード時にemacsバインドで左右カーソル移動{
-"補完が使えなくなるのでコメントアウト
-"	inoremap <C-b> <Left>
-"	inoremap <C-f> <Right>
-"	inoremap <C-a> <C-o>^
-"	inoremap <C-e> <C-o>$
-"	inoremap <C-p> <Up>
-"	inoremap <C-n> <Down>
-"}
 "バックアップ、スワップは作成しない{
   set nobackup
   set noswapfile
@@ -51,39 +44,31 @@ set whichwrap=b,s,h,l,<,>,[,],~
 set number
 
 "eolとtabを可視化する{
+  scriptencoding utf-8
   set list
-  set listchars=eol:↲,tab:▸»,nbsp:⍽
-  "特殊文字ストック$.<\~¶¬>\…->—>—-↲——»▸«
+  set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 "}
-"全角スペースの可視化{
-  augroup highlightIdegraphicSpace
-    autocmd!
-    autocmd Colorscheme * highlight IdeographicSpace ctermbg=black guibg=black
-    "tabの可視化文字の色指定
-    "autocmd Colorscheme * hi SpecialKey guibg=NONE guifg=Gray40
-    autocmd Colorscheme * hi! link SpecialKey Ignore
-    "改行文字をtab文字と同じ色にする
-    autocmd Colorscheme * hi! link NonText Ignore
-    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-  augroup END
-"}
-
-"Ctrl+Sで上書き保存}
-  noremap <C-S>	:update<CR>
-  vnoremap <C-S>	<C-C>:update<CR>
-  inoremap <C-S>	<C-O>:update<CR>
-"}
-
-"netrw(ファイラー)がリモートコピーするときなどにプロンプトを出さない
-" let g:netrw_silent= 1
-
-" pathを通す{
-if has('vim_starting')
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\bin;"
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.7.3-embed-amd64"
-    let $PATH = $PATH . ";" . $VIM . "\\vimfiles\\pack\\MyVimConf\\python-3.7.3-embed-amd64\\Scripts"
-end
-"}
+""全角スペースの可視化{
+"  augroup highlightIdegraphicSpace
+"    autocmd!
+"    autocmd Colorscheme * highlight IdeographicSpace ctermbg=black guibg=black
+"    "tabの可視化文字の色指定
+"    "autocmd Colorscheme * hi SpecialKey guibg=NONE guifg=Gray40
+"    autocmd Colorscheme * hi! link SpecialKey Ignore
+"    "改行文字をtab文字と同じ色にする
+"    autocmd Colorscheme * hi! link NonText Ignore
+"    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+"  augroup END
+""}
+"
+""Ctrl+Sで上書き保存}
+"  noremap <C-S>	:update<CR>
+"  vnoremap <C-S>	<C-C>:update<CR>
+"  inoremap <C-S>	<C-O>:update<CR>
+""}
+"
+""netrw(ファイラー)がリモートコピーするときなどにプロンプトを出さない
+"" let g:netrw_silent= 1
 
 " BOM付きにする
 set bomb
@@ -93,24 +78,24 @@ let g:netrw_dirhistmax=0
 
 " 未保存でもbackgroundへ行ける
 set hidden
-autocmd FileType netrw setl bufhidden=wipe
-
-
-" netrwがウィンドウに表示されていないときにすぐにバッファから削除
-" function! QuitNetrw()
-"   for i in range(1, bufnr($))
-"     if buflisted(i)
-"       if getbufvar(i, '&filetype') == "netrw"
-"         silent exe 'bwipeout ' . i
-"       endif
-"     endif
-"   endfor
-" endfunction
-" autocmd VimLeavePre * call QuitNetrw()
-
-" scala辞書
-autocmd FileType scala :set dictionary=$VIM/vimfiles/pack/MyVimConf/dict/scala.dict
-
+"autocmd FileType netrw setl bufhidden=wipe
+"
+"
+"" netrwがウィンドウに表示されていないときにすぐにバッファから削除
+"" function! QuitNetrw()
+""   for i in range(1, bufnr($))
+""     if buflisted(i)
+""       if getbufvar(i, '&filetype') == "netrw"
+""         silent exe 'bwipeout ' . i
+""       endif
+""     endif
+""   endfor
+"" endfunction
+"" autocmd VimLeavePre * call QuitNetrw()
+"
+"" scala辞書
+"autocmd FileType scala :set dictionary=$VIM/vimfiles/pack/MyVimConf/dict/scala.dict
+"
 " 補完の挙動
 set completeopt=menuone,noselect
 
