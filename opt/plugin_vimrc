@@ -103,6 +103,7 @@ packadd indentLine "インデントを見やすくする
 if executable('node')
   packadd coc.nvim
   call coc#config('coc.preferences.diagnostic', {'displayByAle':'true'})
+  call coc#config('coc.preferences.python', {'jediEnabled':'true'})
 endif
 "
 "
