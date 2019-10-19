@@ -1,5 +1,5 @@
 "フォント設定{
-  set guifont=consolas:h10
+  set guifont=Cascadia_Code:h10:cANSI:qDRAFT,consolas:h10
   set guifontwide=MS_Gothic:h10
 "}
 "アンチエイリアス設定

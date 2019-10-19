@@ -1,6 +1,8 @@
 function! s:config_onehalfdark()
   hi clear SpellBad
   hi SpellBad gui=undercurl cterm=underline guisp=RED
+  hi clear SpellCap
+  hi SpellCap gui=undercurl cterm=underline guisp=Yellow
   "hi SpellBad gui=NONE guifg=NONE ctermfg=NONE cterm=NONE term=NONE guisp=NONE
 endfunction
 autocmd colorscheme onehalfdark call s:config_onehalfdark()

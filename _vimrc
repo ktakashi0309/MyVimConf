@@ -46,7 +46,7 @@ set number
 "eolとtabを可視化する{
   scriptencoding utf-8
   set list
-  set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+  set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
 "}
 ""全角スペースの可視化{
 "  augroup highlightIdegraphicSpace
