@@ -108,5 +108,6 @@ if executable('pyls')
                     \ 'whitelist': ['python'],
                     \ })
         autocmd FileType python call s:configure_lsp()
+        autocmd FileType python imap <expr> . ".\<C-X>\<C-O>"
     augroup end
 endif
