@@ -25,8 +25,8 @@ Windows
 ```
 cd ~
 New-Item vimfiles/pack -ItemType Directory
-write-output 'source $HOME/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii gvimrc
-write-output 'source $HOME/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii vimrc
+write-output 'source $HOME/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii _gvimrc
+write-output 'source $HOME/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii _vimrc
 cd vimfiles/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
 ```
