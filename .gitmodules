@@ -4,9 +4,6 @@
 [submodule "opt/ale"]
 	path = opt/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "opt/fzf.vim"]
-	path = opt/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule "opt/nerdtree"]
 	path = opt/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -25,15 +22,6 @@
 [submodule "opt/vim-syntax-yara"]
 	path = opt/vim-syntax-yara
 	url = https://github.com/s3rvac/vim-syntax-yara.git
-[submodule "opt/ensime-vim"]
-	path = opt/ensime-vim
-	url = https://github.com/ensime/ensime-vim.git
-[submodule "opt/deoplete.nvim"]
-	path = opt/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
-[submodule "opt/jedi-vim"]
-	path = opt/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "opt/vim-lsp"]
 	path = opt/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
@@ -43,10 +31,6 @@
 [submodule "opt/vim-airline-themes"]
 	path = opt/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "opt/coc.nvim"]
-	path = opt/coc.nvim
-	url = https://github.com/neoclide/coc.nvim.git
-	branch = release
 [submodule "opt/typescript-vim"]
 	path = opt/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git

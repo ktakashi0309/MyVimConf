@@ -18,10 +18,10 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 packadd indentLine
 
 "非同期のコードチェッカー{
-"let g:ale_completion_enabled = 1
-"packadd ale 
-"let g:ale_lint_on_save = 1
-"let g:ale_sign_column_always = 1
+let g:ale_completion_enabled = 1
+packadd ale 
+let g:ale_lint_on_save = 1
+let g:ale_sign_column_always = 1
 
 "見た目のカスタマイズ
 packadd vim-airline 
@@ -42,7 +42,6 @@ packadd asyncomplete-lsp.vim
 packadd vim-lsp-settings
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
-  setlocal signcolumn=yes
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> <f2> <plug>(lsp-rename)
   inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
@@ -51,14 +50,10 @@ augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
-"let g:lsp_diagnostics_enabled = 0 " エラー表示はALEで行う
+let g:lsp_diagnostics_enabled = 0 " エラー表示はALEで行う
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 let g:asyncomplete_popup_delay = 10
-
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-
 
 "yara用設定
 function! s:config_yara()
