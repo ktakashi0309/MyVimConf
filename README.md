@@ -17,7 +17,7 @@
 ## Pythonの場合
 * flake8をインストールしてください。`https://pypi.org/project/flake8/`
 * pylsをインストールしてください。`https://pypi.org/project/python-language-server/`
-* poetry環境の場合は`poetry run gvim`でgvimを起動します
+* poetry環境の場合は`poetry shell`のあとgvimを起動します
 
 ## 導入
   
