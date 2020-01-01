@@ -64,10 +64,11 @@ autocmd FileType yara call s:config_yara()
 
 " markdown用設定
 function! s:config_markdown()
+  let g:previm_open_cmd='start'
   packadd vim-markdown
   packadd previm 
-  let g:previm_open_cmd='start'
 endfunction
+autocmd BufRead,BufNewFile *.md  set filetype=markdown
 autocmd FileType markdown call s:config_markdown()
 
 " ps1用設定
