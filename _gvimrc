@@ -25,23 +25,6 @@ set clipboard+=unnamed
     execute 'source' g:save_window_file
   endif
 "}
-""ウィンドウの透過{
-"  gui
-"  "set transparency=220
-""}
-"
-""ターミナルの設定{
-"tmap <LeftMouse> <C-w>N
-"tmap <C-q> <C-w>N
-"command Term terminal powershell
-""}
-"
-"function SaveasFunc() "名前を付けて保存のコマンド{
-"  browse confirm saveas
-"  cd %:h
-"endfunction
-"command Saveas call SaveasFunc()
-""}
 
 ""TOhtmlコマンドカスタマイズ{
 let html_no_pre = 1

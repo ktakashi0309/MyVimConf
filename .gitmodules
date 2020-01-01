@@ -7,9 +7,6 @@
 [submodule "opt/fzf.vim"]
 	path = opt/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule "opt/molokai"]
-	path = opt/molokai
-	url = https://github.com/tomasr/molokai.git
 [submodule "opt/nerdtree"]
 	path = opt/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -22,51 +19,24 @@
 [submodule "opt/previm"]
 	path = opt/previm
 	url = https://github.com/previm/previm.git
-[submodule "opt/vim-auto-save"]
-	path = opt/vim-auto-save
-	url = https://github.com/vim-scripts/vim-auto-save.git
 [submodule "opt/vim-ps1"]
 	path = opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
 [submodule "opt/vim-syntax-yara"]
 	path = opt/vim-syntax-yara
 	url = https://github.com/s3rvac/vim-syntax-yara.git
-[submodule "opt/vim-dirvish"]
-	path = opt/vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish.git
-[submodule "opt/vim-scala"]
-	path = opt/vim-scala
-	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "opt/ensime-vim"]
 	path = opt/ensime-vim
 	url = https://github.com/ensime/ensime-vim.git
-[submodule "opt/vim-go"]
-	path = opt/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "opt/neocomplete.vim"]
-	path = opt/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim.git
 [submodule "opt/deoplete.nvim"]
 	path = opt/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
-[submodule "opt/nvim-yarp"]
-	path = opt/nvim-yarp
-	url = https://github.com/roxma/nvim-yarp.git
-[submodule "opt/vim-hug-neovim-rpc"]
-	path = opt/vim-hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc.git
-[submodule "opt/AutoComplPop"]
-	path = opt/AutoComplPop
-	url = https://github.com/vim-scripts/AutoComplPop.git
 [submodule "opt/jedi-vim"]
 	path = opt/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "opt/vim-lsp"]
 	path = opt/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
-[submodule "opt/rust.vim"]
-	path = opt/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule "opt/async.vim"]
 	path = opt/async.vim
 	url = https://github.com/prabirshrestha/async.vim.git
@@ -77,3 +47,15 @@
 	path = opt/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
+[submodule "opt/typescript-vim"]
+	path = opt/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "opt/asyncomplete.vim"]
+	path = opt/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "opt/asyncomplete-lsp.vim"]
+	path = opt/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "opt/vim-lsp-settings"]
+	path = opt/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git

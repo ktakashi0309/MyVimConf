@@ -17,7 +17,7 @@ set encoding=utf-8
 "新規作成するファイルをutf-8で保存
 set fileencoding=utf-8
 "ファイルを開く際の自動判別優先順位
-set fileencodings=iso-2022-jp,cp932,sjis,enc-jp,utf-8
+set fileencodings=utf-8,iso-2022-jp,cp932,sjis,enc-jp
 "ステータスラインを2行にする
 set stal=2
 "タブ幅を半角4にする
@@ -47,28 +47,17 @@ set number
   scriptencoding utf-8
   set list
   set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
+  autocmd Colorscheme * hi! link SpecialKey Ignore
+  autocmd Colorscheme * hi! link NonText Ignore
 "}
+
 ""全角スペースの可視化{
 "  augroup highlightIdegraphicSpace
 "    autocmd!
 "    autocmd Colorscheme * highlight IdeographicSpace ctermbg=black guibg=black
-"    "tabの可視化文字の色指定
-"    "autocmd Colorscheme * hi SpecialKey guibg=NONE guifg=Gray40
-"    autocmd Colorscheme * hi! link SpecialKey Ignore
-"    "改行文字をtab文字と同じ色にする
-"    autocmd Colorscheme * hi! link NonText Ignore
 "    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 "  augroup END
 ""}
-"
-""Ctrl+Sで上書き保存}
-"  noremap <C-S>	:update<CR>
-"  vnoremap <C-S>	<C-C>:update<CR>
-"  inoremap <C-S>	<C-O>:update<CR>
-""}
-"
-""netrw(ファイラー)がリモートコピーするときなどにプロンプトを出さない
-"" let g:netrw_silent= 1
 
 " BOM付きにする
 set bomb
@@ -78,28 +67,10 @@ let g:netrw_dirhistmax=0
 
 " 未保存でもbackgroundへ行ける
 set hidden
-"autocmd FileType netrw setl bufhidden=wipe
-"
-"
-"" netrwがウィンドウに表示されていないときにすぐにバッファから削除
-"" function! QuitNetrw()
-""   for i in range(1, bufnr($))
-""     if buflisted(i)
-""       if getbufvar(i, '&filetype') == "netrw"
-""         silent exe 'bwipeout ' . i
-""       endif
-""     endif
-""   endfor
-"" endfunction
-"" autocmd VimLeavePre * call QuitNetrw()
-"
-"" scala辞書
-"autocmd FileType scala :set dictionary=$VIM/vimfiles/pack/MyVimConf/dict/scala.dict
-"
+
 " 補完の挙動
 set completeopt=menuone,noselect
-
-
+inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
 
 " ファイルツリーの表示形式、1にするとls -laのような表示になります
 let g:netrw_liststyle=1
