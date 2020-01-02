@@ -51,14 +51,6 @@ set number
   autocmd Colorscheme * hi! link NonText Ignore
 "}
 
-""全角スペースの可視化{
-"  augroup highlightIdegraphicSpace
-"    autocmd!
-"    autocmd Colorscheme * highlight IdeographicSpace ctermbg=black guibg=black
-"    autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-"  augroup END
-""}
-
 " BOM付きにする
 set bomb
 
@@ -82,6 +74,5 @@ let g:netrw_sizestyle="H"
 let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
 " プレビューウィンドウを垂直分割で表示する
 let g:netrw_preview=1
-
 
 runtime! pack/MyVimConf/opt/plugin_vimrc
