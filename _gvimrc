@@ -42,4 +42,4 @@ command TOhtmlAndDelete call TOMyhtmlFunc()
 ""}
 "
 
-runtime! pack/MyVimConf/opt/plugin_gvimrc
+runtime! pack/MyVimConf/plugin_gvimrc

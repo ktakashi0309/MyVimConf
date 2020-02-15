@@ -8,51 +8,29 @@ function! s:config_onehalfdark()
   hi link Ignore Comment
 endfunction
 autocmd colorscheme onehalfdark call s:config_onehalfdark()
-packadd onehalf
 colorscheme onehalfdark
 
 " ファイラー
-packadd nerdtree
 let g:NERDTreeQuitOnOpen = 1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-"インデントを見やすくする
-packadd indentLine
 
 "非同期のコードチェッカー{
 let g:ale_completion_enabled = 1
-packadd ale 
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
 
 "見た目のカスタマイズ
-packadd vim-airline 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 nmap <Tab> <Plug>AirlineSelectNextTab
 nmap <S-Tab> <Plug>AirlineSelectPrevTab
-packadd vim-airline-themes
-AirlineTheme onehalfdark
 
 "vim-lspの設定
-packadd async.vim
-packadd vim-lsp
-packadd asyncomplete.vim
-packadd asyncomplete-lsp.vim
-packadd vim-lsp-settings
-function! s:on_lsp_buffer_enabled() abort
-  setlocal omnifunc=lsp#complete
-  nmap <buffer> gd <plug>(lsp-definition)
-  nmap <buffer> <f2> <plug>(lsp-rename)
-  inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
-endfunction
-augroup lsp_install
-  au!
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
+setlocal omnifunc=lsp#complete
 let g:lsp_diagnostics_enabled = 0 " エラー表示はALEで行う
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
@@ -73,12 +51,6 @@ function! s:config_markdown()
 endfunction
 autocmd BufRead,BufNewFile *.md  set filetype=markdown
 autocmd FileType markdown call s:config_markdown()
-
-" ps1用設定
-function! s:config_ps1()
-  packadd vim-ps1
-endfunction
-autocmd FileType ps1 call s:config_ps1()
 
 " python用設定
 function! s:config_python()
