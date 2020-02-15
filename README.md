@@ -17,7 +17,14 @@
 ## Pythonの場合
 * flake8をインストールしてください。`https://pypi.org/project/flake8/`
 * pylsをインストールしてください。`https://pypi.org/project/python-language-server/`
+* autopep8をインストールしてください。`https://pypi.org/project/autopep8/`
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
+
+
+## Cの場合
+* VisualStudioをインストールしてください
+* VisualStudioからclandをインストールしてください
+* clandにpathを通す必要があります。
 
 ## 導入
   
@@ -49,4 +56,4 @@ git submodule init
 git submodule update
 ```
 を実行する
-opt/plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。
+plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。
