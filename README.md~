@@ -1,7 +1,15 @@
-# 依存
+# MyVimConf
+
+## 概要
+* VimのプラグインをVim標準のパッケージ管理機能で管理するためのリポジトリ。
+* つまりVimプラグインの集まりであるVimパッケージである。
+* プラグインの有効無効を簡単に切り替えできるよう一つのファイルで管理する。
+* また、一般的な_vimrc,_gvimrcも付随する。
+
+## 依存
 * git,vim8.2,curlをインストールしてください。
 
-## Ubuntu18.04の場合
+### Ubuntu18.04の場合
 ```
 sudo apt -y install build-essential ncurses-dev xorg-dev curl libgtk-3-dev git
 
@@ -12,13 +20,13 @@ make
 sudo make install
 ```
 
-## Windowsの場合
+### Windowsの場合
 * git for windowsをインストール
 * kaoriya vim をダウンロード・解凍して%USERPROFILE%\AppData\Local においてPathを通す
 * curl はデフォルトで入っている
 
-# インストール方法
-## Ubuntu18.04の場合
+## インストール方法
+### Ubuntu18.04の場合
 ```
 cd ~/.local/share
 git clone https://github.com/ktakashi0309/MyVimConf.git
@@ -26,41 +34,28 @@ mkdir ~/.vim
 echo 'source $HOME/.local/share/MyVimConf/vimrc' > ~/.vim/vimrc
 echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
 ```
-## Windowsの場合
+### Windowsの場合
 ```
 cd ~/AppData/Local
 git clone https://github.com/ktakashi0309/MyVimConf.git
-mkdir ~\vimfiles
-write-output 'source $HOME\AppData\Local\MyVimConf\gvimrc'|out-file -Encoding ascii ~\vimfiles\gvimrc
-write-output 'source $HOME\AppData\Local\MyVimConf\vimrc'|out-file -Encoding ascii ~\vimfiles\vimrc
-```
+mkdir ~/vimfiles
+write-output 'source $HOME/AppData/Local/MyVimConf/gvimrc'|out-file -Encoding ascii vimfiles/gvimrc
+write-output 'source $HOME/AppData/Local/MyVimConf/vimrc'|out-file -Encoding ascii vimfiles/vimrc
 
-# 各言語環境でのセットアップ
-
-## Rust
+## Rustを書く場合
 * cargo,rlsをインストールしてください。`https://github.com/rust-lang/rls`
 
-## Python
+## Pythonの場合
+* python3-venv flake8, pyls, mypy をインストール
+
 ### Ubuntu18.04の場合
 ```
 sudo apt -y install python3-venv python3-pip
-pip3 install --update pip3
 pip3 install flake8 python-language-server mypy
 ```
-### Windowsの場合
-* visual studioからpythonをインストールして下記のPathを通す。PathはWindowsAppsより上にする。
-```
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64
-```
-* 管理者権限のpowershellで下記実行
-```
-pip install --update pip
-pip install flake8 python-language-server mypy
-```
 
-## Poetry
-* python環境をインストールしておく
+
+## Poetryの場合
 ### Ubuntu18.04の場合
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
 ```
@@ -71,12 +66,12 @@ poetry add --dev autopep8
 ```
 
 
-## C言語
+## Cの場合
 * VisualStudioをインストールしてください
 * VisualStudioからclandをインストールしてください
 * clandにpathを通す必要があります。
 
-### 導入
+## 導入
   
 Windows
 ```
@@ -97,3 +92,13 @@ echo 'source $HOME/.vim/pack/MyVimConf/_gvimrc' > .vim/_gvimrc
 cd .vim/pack
 git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
 ```
+
+## プラグインの追加
+optディレクトリにプラグインのリポジトリをgit submodule addする。
+プラグインの中もsubmoduleがある場合はプラグインのディレクトリ内で
+```
+git submodule init
+git submodule update
+```
+を実行する
+plugin_vimrcでプラグインのロード有無やプラグインに関する設定を記述する。

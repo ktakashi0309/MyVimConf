@@ -9,7 +9,7 @@ endif
 set renderoptions=type:directx,renmode:5
 
 "無名レジスタに入れるデータを、*レジスタ(クリップボード)にも入れる
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 "insert modeの<S-Insert>を貼り付けに
 imap <S-Insert> <C-o>p

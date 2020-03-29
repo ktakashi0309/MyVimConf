@@ -75,7 +75,11 @@ let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
 " プレビューウィンドウを垂直分割で表示する
 let g:netrw_preview=1
 
-let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+if has('win64')
+  let vimplug_exists=expand('~/vimfiles/autoload/plug.vim')
+elseif
+  let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+endif
 if !filereadable(vimplug_exists)
   if !executable("curl")
     echoerr "You have to install curl or first install vim-plug yourself!"
