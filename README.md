@@ -34,6 +34,9 @@ mkdir ~\vimfiles
 write-output 'source $HOME\AppData\Local\MyVimConf\gvimrc'|out-file -Encoding ascii ~\vimfiles\gvimrc
 write-output 'source $HOME\AppData\Local\MyVimConf\vimrc'|out-file -Encoding ascii ~\vimfiles\vimrc
 ```
+## プラグインのインストール
+* vimを起動するとvim-plugとプラグインが自動インストールされる
+* vimを開きなおしたら完了
 
 # 各言語環境でのセットアップ
 
@@ -68,21 +71,26 @@ pip install --user flake8 python-language-server mypy
 
 ## Poetry
 * python環境をインストールしておく
+* poetryをインストールする
 ### Ubuntu18.04の場合
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
 ```
 pip3 install poetry
 # 一度ログアウトが必要
-poetry init
-poetry add --dev autopep8
 ```
 
 ### Windowsの場合
 ```
 pip install --user poetry
+```
+
+### プロジェクトの初期化
+* プロジェクトディレクトリに移動して下記を実行
+```
 poetry init
 poetry add --dev autopep8
 ```
+
 
 ## C言語
 * VisualStudioをインストールしてください
