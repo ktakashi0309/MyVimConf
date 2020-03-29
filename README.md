@@ -8,7 +8,8 @@
 
 ## 依存
 * git,vim,curlをインストールしてください。
-###Ubuntu18.04の場合
+
+### Ubuntu18.04の場合
 ```
 sudo apt -y install build-essential ncurses-dev xorg-dev curl libgtk-3-dev git
 
@@ -32,15 +33,22 @@ echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
 * cargo,rlsをインストールしてください。`https://github.com/rust-lang/rls`
 
 ## Pythonの場合
-* python3-venv flake8, pyls, mypy 
+* python3-venv flake8, pyls, mypy をインストール
+
 ### Ubuntu18.04の場合
 ```
 sudo apt -y install python3-venv python3-pip
-sudo pip3 install flake8 python-language-server mypy
+pip3 install flake8 python-language-server mypy
 ```
+
+
+## Poetryの場合
+### Ubuntu18.04の場合
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
 ```
-sudo pip3 install poetry
+pip3 install poetry
+# 一度ログアウトが必要
+poetry init
 poetry add --dev autopep8
 ```
 
