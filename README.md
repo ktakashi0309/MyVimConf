@@ -62,7 +62,9 @@ pip install --update --user pip
 %USERPROFILE%\AppData\Roaming\Python\Python37\Scripts
 ```
 * 一般権限のpowershellで下記実行
+```
 pip install --user flake8 python-language-server mypy
+```
 
 ## Poetry
 * python環境をインストールしておく
