@@ -23,6 +23,7 @@ git clone https://github.com/ktakashi0309/MyVimConf.git
 mkdir ~/.vim
 echo 'source $HOME/.local/share/MyVimConf/vimrc' > ~/.vim/vimrc
 echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
+
 ```
 
 
@@ -32,8 +33,9 @@ echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
 ## Pythonの場合
 ### Ubuntu18.04の場合
 ```
-sudo apt install python3-venv python3-pip
-sudo pip3 install flake8 python-language-server autopep8 mypi
+sudo apt -y install python3-venv python3-pip
+sudo pip3 install flake8 python-language-server autopep8 mypy
+
 ```
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
 
