@@ -30,13 +30,12 @@ echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
 * cargo,rlsをインストールしてください。`https://github.com/rust-lang/rls`
 
 ## Pythonの場合
-* flake8をインストールしてください。`https://pypi.org/project/flake8/`
-* pylsをインストールしてください。`https://pypi.org/project/python-language-server/`
-* autopep8をインストールしてください。`https://pypi.org/project/autopep8/`
+### Ubuntu18.04の場合
+```
+sudo apt install python3-venv python3-pip
+sudo pip3 install flake8 python-language-server autopep8 mypi
+```
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
-```
-pip3 install flake8 python-language-server autopep8 mypi
-```
 
 
 ## Cの場合
