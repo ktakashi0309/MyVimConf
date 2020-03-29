@@ -55,9 +55,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64
 ```
 * 管理者権限のpowershellで下記実行
 ```
-pip install --update pip
-pip install flake8 python-language-server mypy
+pip install --update --user pip
 ```
+* 下記パスを追加(pythonのバージョンは合わせる)
+```
+%USERPROFILE%\AppData\Roaming\Python\Python37\Scripts
+```
+* 一般権限のpowershellで下記実行
+pip install --user flake8 python-language-server mypy
 
 ## Poetry
 * python環境をインストールしておく
@@ -70,30 +75,14 @@ poetry init
 poetry add --dev autopep8
 ```
 
+### Windowsの場合
+```
+pip install --user poetry
+poetry init
+poetry add --dev autopep8
+```
 
 ## C言語
 * VisualStudioをインストールしてください
 * VisualStudioからclandをインストールしてください
 * clandにpathを通す必要があります。
-
-### 導入
-  
-Windows
-```
-cd ~
-New-Item vimfiles/pack -ItemType Directory
-write-output 'source $HOME/vimfiles/pack/MyVimConf/_gvimrc'|out-file -Encoding ascii vimfiles/gvimrc
-write-output 'source $HOME/vimfiles/pack/MyVimConf/_vimrc'|out-file -Encoding ascii vimfiles/vimrc
-cd vimfiles/pack
-git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
-```
-
-Linux
-```
-cd ~
-mkdir -p .vim/pack
-echo 'source $HOME/.vim/pack/MyVimConf/_vimrc' > .vim/_vimrc
-echo 'source $HOME/.vim/pack/MyVimConf/_gvimrc' > .vim/_gvimrc
-cd .vim/pack
-git clone --recursive https://github.com/ktakashi0309/MyVimConf.git
-```
