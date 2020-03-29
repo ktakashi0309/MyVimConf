@@ -7,8 +7,23 @@
 * また、一般的な_vimrc,_gvimrcも付随する。
 
 ## 依存
-* vimをインストールしてください。
 * gitをインストールしてください。
+* vimをインストールしてください。
+###Ubuntu18.04の場合
+```
+sudo apt -y install build-essential ncurses-dev xorg-dev curl ibus-mozc libgtk-3-dev
+cd /opt
+sudo git clone https://github.com/vim/vim.git
+cd vim
+sudo ./configure --with-features=huge --enable-fail-if-missing --enable-multibyte --with-x --enable-gui=gtk3 --enable-fontset --enable-gpm --enable-cscope
+sudo make
+sudo make install
+cd ~/.local/share
+git clone https://github.com/ktakashi0309/MyVimConf.git
+mkdir ~/.vim
+echo 'source $HOME/.local/share/MyVimConf/vimrc' > ~/.vim/vimrc
+echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
+```
 
 
 ## Rustを書く場合
@@ -19,6 +34,9 @@
 * pylsをインストールしてください。`https://pypi.org/project/python-language-server/`
 * autopep8をインストールしてください。`https://pypi.org/project/autopep8/`
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
+```
+pip3 install flake8 python-language-server autopep8 mypi
+```
 
 
 ## Cの場合
