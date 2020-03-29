@@ -114,7 +114,9 @@ function! s:config_onehalfdark()
   hi link Ignore Comment
 endfunction
 autocmd colorscheme onehalfdark call s:config_onehalfdark()
-colorscheme onehalfdark
+if filereadable(expand(plug_home."/onehalf/vim/colors/onehalfdark.vim"))
+  colorscheme onehalfdark
+endif
 
 " ファイラー
 let g:NERDTreeQuitOnOpen = 1

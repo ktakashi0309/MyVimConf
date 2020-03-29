@@ -48,4 +48,7 @@ endfunction
 command TOhtmlAndDelete call TOMyhtmlFunc()
 ""}
 "
-colorscheme onehalfdark
+if filereadable(expand(plug_home."/onehalf/vim/colors/onehalfdark.vim"))
+  colorscheme onehalfdark
+endif
+
