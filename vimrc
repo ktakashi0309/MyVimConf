@@ -77,7 +77,7 @@ let g:netrw_preview=1
 
 if has('win64')
   let vimplug_exists=expand('~/vimfiles/autoload/plug.vim')
-elseif
+else
   let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 endif
 if !filereadable(vimplug_exists)
