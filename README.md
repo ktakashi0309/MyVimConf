@@ -47,8 +47,8 @@ write-output 'source $HOME\AppData\Local\MyVimConf\vimrc'|out-file -Encoding asc
 ### Ubuntu18.04の場合
 ```
 sudo apt -y install python3-venv python3-pip
-pip3 install --update pip3
-pip3 install flake8 python-language-server mypy
+pip3 install --upgrade pip # need logoff
+pip install flake8 python-language-server mypy
 ```
 ### Windowsの場合
 * visual studioからpythonをインストールして下記のPathを一番上に追加
@@ -75,7 +75,7 @@ pip install --user flake8 python-language-server mypy
 ### Ubuntu18.04の場合
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
 ```
-pip3 install poetry
+pip install poetry
 # 一度ログアウトが必要
 ```
 
