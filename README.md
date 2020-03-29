@@ -7,17 +7,18 @@
 * また、一般的な_vimrc,_gvimrcも付随する。
 
 ## 依存
-* gitをインストールしてください。
-* vimをインストールしてください。
+* git,vim,curlをインストールしてください。
 ###Ubuntu18.04の場合
 ```
-sudo apt -y install build-essential ncurses-dev xorg-dev curl ibus-mozc libgtk-3-dev
-cd /opt
-sudo git clone https://github.com/vim/vim.git
-cd vim
-sudo ./configure --with-features=huge --enable-fail-if-missing --enable-multibyte --with-x --enable-gui=gtk3 --enable-fontset --enable-gpm --enable-cscope
-sudo make
+sudo apt -y install build-essential ncurses-dev xorg-dev curl libgtk-3-dev git
+
+git clone https://github.com/vim/vim.git ~/.local/share/vim
+cd ~/.local/share/vim
+./configure --with-features=huge --enable-fail-if-missing --enable-multibyte --with-x --enable-gui=gtk3 --enable-fontset --enable-gpm --enable-cscope
+make
+
 sudo make install
+
 cd ~/.local/share
 git clone https://github.com/ktakashi0309/MyVimConf.git
 mkdir ~/.vim
@@ -31,13 +32,17 @@ echo 'source $HOME/.local/share/MyVimConf/gvimrc' > ~/.vim/gvimrc
 * cargo,rlsをインストールしてください。`https://github.com/rust-lang/rls`
 
 ## Pythonの場合
+* python3-venv flake8, pyls, mypy 
 ### Ubuntu18.04の場合
 ```
 sudo apt -y install python3-venv python3-pip
-sudo pip3 install flake8 python-language-server autopep8 mypy
-
+sudo pip3 install flake8 python-language-server mypy
 ```
 * poetry環境の場合は`poetry shell`のあとgvimを起動します
+```
+sudo pip3 install poetry
+poetry add --dev autopep8
+```
 
 
 ## Cの場合
