@@ -48,20 +48,20 @@ pip3 install --update pip3
 pip3 install flake8 python-language-server mypy
 ```
 ### Windowsの場合
-* visual studioからpythonをインストールして下記のPathを通す。PathはWindowsAppsより上にする。
+* visual studioからpythonをインストールして下記のPathを一番上に追加
 ```
 C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts
 C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64
 ```
-* 管理者権限のpowershellで下記実行
+* powershellで下記実行
 ```
-pip install --update --user pip
+pip install --upgrade --user pip
 ```
-* 下記パスを追加(pythonのバージョンは合わせる)
+* 下記パスを一番上に追加(pythonのバージョンは合わせる)
 ```
 %USERPROFILE%\AppData\Roaming\Python\Python37\Scripts
 ```
-* 一般権限のpowershellで下記実行
+* powershellを開きなおして下記実行
 ```
 pip install --user flake8 python-language-server mypy
 ```
