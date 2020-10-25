@@ -52,7 +52,7 @@ set number
 "}
 
 " BOM付きにする
-set bomb
+set nobomb
 
 " netrwの履歴保存ファイルの作成を停止
 let g:netrw_dirhistmax=0
